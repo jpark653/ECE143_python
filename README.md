@@ -14,7 +14,7 @@ Function : drawcanvas() :
 Libraries used: matplotlib, random, math, numpy,time
 
          
-        In this project, user input, number of the trials, width and height of the canvas, program draw several number of 
+In this project, user input, number of the trials, width and height of the canvas, program draw several number of 
 rectangles on the top of canvas. and it will draw the rectangle untill it covers the maximum area of the initial surface
 of area. Since drawing rectangle is all random. So, program needs to create random position inside the canvas and 
 also have to create random number of width and height which should fit inside the fixed canvas size.
@@ -33,7 +33,17 @@ Algorithm of Trimming:
  
  I commented the plt.show() line for the faster run of the program. 
  
-
+ 16 cases + else no corruption cases 
+ (4) right upper/ left upper / right lower/ left lower -> creates 2 sub rectangle eaches 
+ (4) simple parallel up / down / right /left -> create 1 sub rectangle each
+ (4) super up / down / left / right -> creates 3 sub rectangle each 
+ (2) long horizontal / vertical -> creates 2 sub rectangle each
+ (1) fully inside -> none
+ (1) fully outside -> creates 4 sub rectangle 
+ (else) no corruption
+ 
+ compare each sub rectangles surface area and only save the maximum value of subrectangle, and keep the new trimmed rectangle 
+ infomation inside the listRec
 Discussion Quesitons: 
   Result : 
          Program read the number of trial(cycle) of program at the beginning of the program
