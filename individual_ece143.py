@@ -6,7 +6,11 @@ import numpy as np
 from itertools import cycle
 import time
 '''
-
+Jinbum Park 
+ECE 143 
+Date : 05-22-2018
+Project Name:individual project
+FileName : individual_ECE143.py
 '''
 def drawcanvas():
     '''
